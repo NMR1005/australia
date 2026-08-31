@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A little piece of home</title>
+  <style>
+    :root {
+      --bg: #f5efe7;
+      --card: #fffaf4;
+      --text: #2f241f;
+      --muted: #76665c;
+      --accent: #d97745;
+      --line: #e7d9cd;
+      --locked: #e9e0d8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(217,119,69,.12), transparent 26%),
+        linear-gradient(180deg, #faf6f1 0%, var(--bg) 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .wrap {
+      width: min(680px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: rgba(255,255,255,.55);
+    }
+    h1 {
+      margin: 20px 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      font-size: clamp(42px, 9vw, 72px);
+      line-height: .98;
+      letter-spacing: -.03em;
+    }
+    .intro {
+      margin: 0 0 34px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 560px;
+    }
+    .sunline {
+      width: 70px;
+      height: 2px;
+      background: var(--accent);
+      margin: 26px 0 34px;
+      border-radius: 999px;
+    }
+    .grid { display: grid; gap: 14px; }
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px 20px 18px;
+      box-shadow: 0 10px 30px rgba(83, 59, 42, .06);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(83, 59, 42, .09);
+      border-color: #d8c2b3;
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: .01em;
+    }
+    .icon { font-size: 22px; }
+    .desc {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .locked {
+      background: rgba(233,224,216,.72);
+      cursor: default;
+      box-shadow: none;
+    }
+    .locked:hover { transform: none; box-shadow: none; border-color: var(--line); }
+    .badge {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(47,36,31,.07);
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    @media (min-width: 640px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">For Finn & Nati · Australia 2026/27</div>
+    <h1>A little piece<br>of home.</h1>
+    <p class="intro">Für die Momente, in denen 16.000 km plötzlich ein bisschen weit sind. Öffnet nur das, was gerade für euch bestimmt ist.</p>
+    <div class="sunline"></div>
+
+    <section class="grid">
+      <a class="card" href="PROTON_LINK_HIER_EINSETZEN" target="_blank" rel="noopener noreferrer">
+        <div class="top">
+          <div class="title">Nachrichten von Zuhause</div>
+          <div class="icon">🎙️</div>
+        </div>
+        <div class="desc">Sprachnachrichten, Videos und kleine Grüße von den Menschen, die euch fehlen.</div>
+        <div class="badge">Jetzt öffnen</div>
+      </a>
+    </section>
+
+    <section class="grid two" style="margin-top:14px;">
+      <div class="card locked">
+        <div class="top"><div class="title">Happy Birthday</div><div class="icon">🎂</div></div>
+        <div class="desc">Nicht vorher. Wirklich nicht.</div>
+        <div class="badge">Locked</div>
+      </div>
+
+      <div class="card locked">
+        <div class="top"><div class="title">Christmas from home</div><div class="icon">🎄</div></div>
+        <div class="desc">Für Weihnachten am anderen Ende der Welt.</div>
+        <div class="badge">Locked</div>
+      </div>
+
+      <div class="card locked">
+        <div class="top"><div class="title">When you miss home</div><div class="icon">🏠</div></div>
+        <div class="desc">Für die Tage, an denen Hamburg ziemlich weit weg wirkt.</div>
+        <div class="badge">Locked</div>
+      </div>
+
+      <div class="card locked">
+        <div class="top"><div class="title">Not yet…</div><div class="icon">🔒</div></div>
+        <div class="desc">Kommt später. Keine Sorge.</div>
+        <div class="badge">Coming soon</div>
+      </div>
+    </section>
+
+    <footer>
+      Made with love from home. Die Inhalte können jederzeit ergänzt werden – der QR-Code zur Website bleibt derselbe.
+    </footer>
+  </main>
+</body>
+</html>
